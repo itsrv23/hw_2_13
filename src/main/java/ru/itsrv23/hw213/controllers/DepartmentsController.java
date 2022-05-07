@@ -29,7 +29,7 @@ public class DepartmentsController {
     // /departments/min-salary?departmentId=5
     @GetMapping("/min-salary")
     public Employee getMixSalaryEmployeeByDepartment(@RequestParam(name = "departmentId") Integer departmentId) {
-        return departmentsService.getMixSalaryEmployeeByDepartment(departmentId);
+        return departmentsService.getMinSalaryEmployeeByDepartment(departmentId);
     }
 
     // /departments/all?departmentId=5

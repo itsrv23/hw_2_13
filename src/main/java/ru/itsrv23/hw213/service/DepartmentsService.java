@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DepartmentsService {
     Employee getMaxSalaryEmployeeByDepartment(Integer departmentId);
-    Employee getMixSalaryEmployeeByDepartment(Integer departmentId);
+    Employee getMinSalaryEmployeeByDepartment(Integer departmentId);
     List<Employee> getAllEmployeeByDepartment(Integer departmentId);
     List<Employee> getAllEmployee();
 }

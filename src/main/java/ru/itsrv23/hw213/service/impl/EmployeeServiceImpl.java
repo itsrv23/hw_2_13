@@ -17,7 +17,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl() {
         this.employeeBookMap =  new HashMap<>();
     }
-
+    //Добавил в сервис
+    @Override
     public Map<String, Employee> getEmployeeBookMap() {
         return employeeBookMap;
     }
@@ -63,11 +64,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public String getFIO(String firstName, String lastName, String patronymic) {
-        return firstName + " " +  lastName + " " + patronymic;
-    }
-
-    @Override
     public Employee findEmployee(String firstName, String lastName, String patronymic) {
         String fio =  getFIO(firstName, lastName, patronymic);
         if (employeeBookMap.containsKey(fio)) {
@@ -75,6 +71,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         } else {
             throw new EmployeeNotFoundException();
         }
+    }
+
+    // Метод используется только в этом классе, и как показала практика нигде более, сделал приватным
+    private String getFIO(String firstName, String lastName, String patronymic) {
+        return firstName + " " +  lastName + " " + patronymic;
     }
 
 

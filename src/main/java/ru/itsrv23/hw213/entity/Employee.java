@@ -52,6 +52,10 @@ public class Employee {
         return Objects.hash(firstName, lastName, patronymic);
     }
 
+    public String getFIO() {
+        return firstName + " " +  lastName + " " + patronymic;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
