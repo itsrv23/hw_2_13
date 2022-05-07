@@ -12,7 +12,7 @@ import static ru.itsrv23.hw213.constance.EmployeeServiceImplTestConstance.*;
 
 class EmployeeServiceImplTest {
 
-    EmployeeServiceImpl out = new EmployeeServiceImpl();
+    private final EmployeeServiceImpl out = new EmployeeServiceImpl();
 
     @Test
     void shouldAddEmployeeAndReturnThisEmployee() {

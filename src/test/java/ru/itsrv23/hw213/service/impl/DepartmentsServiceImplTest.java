@@ -23,7 +23,7 @@ class DepartmentsServiceImplTest {
     private EmployeeServiceImpl employeeServiceMock;
 
     @InjectMocks
-    public DepartmentsServiceImpl out;
+    private DepartmentsServiceImpl out;
 
     @Test
         //Такое наименование методов на мой взгляд более функциональное
